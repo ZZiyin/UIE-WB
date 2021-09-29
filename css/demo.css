@@ -1,0 +1,118 @@
+html {
+	font-family: Montserrat, sans-serif;
+	line-height: 1.5;
+	color: #4a4a4a;
+}
+body {
+	margin: 0;
+}
+header{
+	text-align: center;
+	overflow: hidden;
+}
+p {
+	margin: 0; }
+.container {
+	max-width: 920px;
+	margin: 0 auto;
+	padding: 0 0.75rem;
+}
+.heading-font {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: 400;}
+a {
+	text-decoration: none;
+	color: #ef5f52;
+	transition: 0.5s; }
+h1 {
+	font-size: 3rem;
+	margin: 0;
+	font-size: x-large;
+	font-weight: 900;
+}
+h2 {
+	margin: 0 0 1.5rem;
+	 text-align: justify;
+	 font-size: medium;
+}
+h3 {
+	margin: 0;
+	 text-align: justify;
+	 font-size: medium;
+}
+section h2, section h3, a {
+	color: #ef5f52;
+}
+section a {
+	border-bottom: 1px solid;
+}
+section a:hover {
+	color: #000;
+}
+
+.mb {
+	margin-bottom: 1.5rem!important;
+}
+
+h2.heading-font {
+	font-size: 3rem;
+}
+h3.heading-font {
+	font-size: 2rem;
+}
+.left {
+  float: left;
+  width: 680px;
+}
+.right {
+  float: left;
+  width: 20%;
+}
+ 
+/* 列后清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.beer-slider {
+	margin-bottom: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer{
+    height:50px;
+    background:#ffffff;
+    border-top:10px solid #4c4c4c;
+    margin-top:50px;
+}
+.footer p{
+    color:#999;
+    font:11px Helvetica;
+    text-decoration: none;
+}
+.footer .w{
+    padding-top:18px;
+}
+.footer p{
+    margin-left:10px;
+    margin-right:8px;
+    margin-bottom:8px;
+}
+.footer .copy{
+    float:right;
+}
+
+.btn{
+	padding: 10px 10px;
+	font: 14px bold #ffffff;
+	border-radius: 10px;
+	background-color: #000000;
+	color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+	width: 100%;
+  }
+  
