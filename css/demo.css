@@ -106,14 +106,15 @@ h3.heading-font {
 
 .btn{
 	padding: 10px 10px;
-	font: 14px bold #ffffff;
+
 	border-radius: 10px;
 	background-color: #000000;
 	color: white;
 }
 
 @media screen and (max-width: 600px) {
-  .column {
-	width: 100%;
-  }
+	.column {
+		width: 100%;
+	}
+}
   
