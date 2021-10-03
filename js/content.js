@@ -104,6 +104,14 @@ preload(
     "img/UWCNN/682_img_.png_out.png",
     "img/waternet/682_img_.png",
     "img/UIEDAL/682_img_.png_out.jpg",
+    "img/ori/184_img_.png",
+    "img/ours/184_img_.png_out.jpg",
+    "img/ULAP/184_img__ULAP.jpg",
+    "img/IBLA/184_img__IBLA.jpg",
+    "img/UDCP/184_img__UDCP.jpg",
+    "img/UWCNN/184_img_.png_out.png",
+    "img/waternet/184_img_.png",
+    "img/UIEDAL/184_img_.png_out.jpg"
 )
 
 
