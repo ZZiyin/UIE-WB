@@ -2,487 +2,116 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Underwater image enhancement via a wavelet-based dual stream network</title>
+  <title>A Wavelet-based Dual-stream Network for Underwater Image Enhancement</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="BeerSlider.css">
   <link rel="stylesheet" type="text/css" href="slick/slick.css">
   <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
   <link rel="stylesheet" href="css/demo.css">
-  
- 
 
-<style type="text/css">
-    html, body {
-      margin: 0;
-      padding: 0;
-    }
-    * {
-      box-sizing: border-box;
-    }
-
-    .slider {
-      width: 130%;
-	  height: 100%;
-      margin: 0px auto;
-    }
-
-    .slick-slide {
-      margin: 0px 20px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: .2;
-    }
-
-    .slick-active {
-      opacity: .5;
-    }
-
-    .slick-current {
-      opacity: 1;
-    }
-  </style>
 </head>
  
 <body>
 	
 	<div class="container">
 	    <header>
-
-            <h1> <b> Underwater image enhancement via a wavelet-based dual stream network </b></h1>
 			</br>
-			<h2>Ziyin Ma and Changjae Oh</h2>
+            <h1> <b> A Wavelet-based Dual-stream Network for Underwater Image Enhancement </b></h1>
+			</br>
+			<h2><center>Ziyin Ma and Changjae Oh</center></h2>
 			<h2><center>School of Electrical Engineering and Computer Science, Queen Mary University of London, UK</center></h2>
 			<h2><b>Abstract</b></h2>
-			 <h2>
-				 We present a wavelet-based dual-stream network that addresses color cast and blur in underwater images. We handle these artifacts separately by decomposing an input image into frequency bands using discrete wavelet transform, which generates the downsampled structure image and detail images. These sub-band images are used as input to our dual-stream network that incorporates two sub-networks, multi-color space fusion network and detail enhancement network. The multi-color space network takes the decomposed structure image as input and estimates the color corrected output by employing the feature representations from diverse color spaces of the input. The detail enhancement network addresses the blurriness of the original underwater image by improving the image details from high-frequency sub-bands. We validate the proposed model on both real-world dataset and synthetic underwater datasets and show the effectiveness of the proposed method in color correction and blur removal with low computation. 
+			 <h2 style="font: inherit;">
+				 We present a wavelet-based dual-stream network that addresses color cast and blur in underwater images. We handle these artifacts separately by decomposing an input image into frequency bands using discrete wavelet transform, which generates the downsampled structure image and detail images. These sub-band images are used as input to our dual-stream network that incorporates two sub-networks, multi-color space fusion network and detail enhancement network. The multi-color space network takes the decomposed structure image as input and estimates the color corrected output by employing the feature representations from diverse color spaces of the input. The detail enhancement network addresses the blurriness of the original underwater image by improving the image details from high-frequency sub-bands. We validate the proposed model on both real-world dataset and synthetic underwater datasets and show the effectiveness of the proposed method in color correction and blur removal with low computation.
 			 </h2>
 	    </header>
-	<h2><b>Visual comparison</b></h2>
+			<h2><b>Visual comparison</b></h2>
 	
-	<div class ="row">
-	
-	<div class="left">
-		<div id = "pic">
-			<img  src="img/ori/T6000.png" height=100% width=100%" style="
-    padding-left: 50px;
-    padding-right: 50px;
-    margin-top: 10px;
-    margin-bottom: 30px;"></br>
-		</div>
-		<div class="button" style="padding-left: 50px;">	
-			<button id ="btn1" class= 'btn'>Original</button>
-			<button id ="btn2" class= 'btn'>OURS</button>
-			<button id ="btn3" class= 'btn'>ULAP</button>
-			<button id ="btn4" class= 'btn'>IBAL</button>
-			<button id ="btn5" class= 'btn'>UDCP</button>
-			<button id ="btn6" class= 'btn'>UWCNN</button>
-			<button id ="btn7" class= 'btn'>WaterNet</button>
-			<button id ="btn8" class= 'btn'>UIE-DAL</button>
-		</div>		
-	</div>
-	<div class="right">
-		<div class="center slider">
-		  <div id="T6000">
-			<img src="img/ori/T6000.png" height="100" width="350">
-		  </div>
-		  <div id="41" >
-			<img src="img/ori/41_img_.png" height="100" width="350">
-		  </div>
-		  <div id="615">
-			<img src="img/ori/615_img_.png" height="100" width="350">
-		  </div>
-		  <div id="73">
-			<img src="img/ori/73_img_.png" height="100" width="350">
-		  </div>
-		  <div id="184">
-			<img src="img/ori/184_img_.png" height="100" width="350">
-		  </div>
-		  <div id="208">
-			<img src="img/ori/208_img_.png" height="100" width="350">
-		  </div>
-		  <div id="116">
-			<img src="img/ori/116_img_.png" height="100" width="350">
-		  </div>
-		  <div id="197">
-		  	<img src="img/ori/197_img_.png" height="100" width="300">
-		  </div>
-		  <div id="200">
-			<img src="img/ori/200_img_.png" height="100" width="350">
-		  </div>
-		  <div id="211">
-			<img src="img/ori/211_img_.png" height="100" width="350">
-		  </div>
-		  <div id="603">
-			<img src="img/ori/603_img_.png" height="100" width="300">
-		  </div>
-		  <div id="682">
-			<img src="img/ori/682_img_.png" height="100" width="300">
-		  </div>
-		 
-		</div>
-	</div>
-	</div>
+		<div class ="row">
+
+		<div class="left">
+
+			<img id="pic" style="display:block" src="img/ori/T6000.png"  >
+
+			<img src="img/ori/41_img_.png"  style="display:none">
+			<img src="img/ori/615_img_.png" style="display:none">
+			<img src="img/ori/73_img_.png"  style="display:none">
+			<img src="img/ori/184_img_.png" style="display:none">
+			<img src="img/ori/208_img_.png" style="display:none">
+			<img src="img/ori/116_img_.png" style="display:none">
+			<img src="img/ori/197_img_.png" style="display:none">
+			<img src="img/ori/200_img_.png" style="display:none">
+			<img src="img/ori/211_img_.png" style="display:none">
+			<img src="img/ori/603_img_.png" style="display:none">
+			<img src="img/ori/682_img_.png" style="display:none">
 
 
-	
+			<div class="button" >
+				<button id ="btn1" class= 'btn'>Original</button>
+				<button id ="btn3" class= 'btn'>ULAP</button>
+				<button id ="btn4" class= 'btn'>IBAL</button>
+				<button id ="btn5" class= 'btn'>UDCP</button>
+				<button id ="btn6" class= 'btn'>UWCNN</button>
+				<button id ="btn7" class= 'btn'>WaterNet</button>
+				<button id ="btn8" class= 'btn'>UIE-DAL</button>
+				<button id ="btn2" class= 'btn'>OURS</button>
+			</div>
+
+		</div>
+		<div class="right">
+			<div class="center slider">
+			  <div id="T6000">
+				<img src="img/ori/T6000.png" height="100" width="350">
+			  </div>
+			  <div id="41" >
+				<img src="img/ori/41_img_.png" height="100" width="350">
+			  </div>
+			  <div id="615">
+				<img src="img/ori/615_img_.png" height="100" width="350">
+			  </div>
+			  <div id="73">
+				<img src="img/ori/73_img_.png" height="100" width="350">
+			  </div>
+			  <div id="184">
+				<img src="img/ori/184_img_.png" height="100" width="350">
+			  </div>
+			  <div id="208">
+				<img src="img/ori/208_img_.png" height="100" width="350">
+			  </div>
+			  <div id="116">
+				<img src="img/ori/116_img_.png" height="100" width="350">
+			  </div>
+			  <div id="197">
+				<img src="img/ori/197_img_.png" height="100" width="300">
+			  </div>
+			  <div id="200">
+				<img src="img/ori/200_img_.png" height="100" width="350">
+			  </div>
+			  <div id="211">
+				<img src="img/ori/211_img_.png" height="100" width="350">
+			  </div>
+			  <div id="603">
+				<img src="img/ori/603_img_.png" height="100" width="300">
+			  </div>
+			  <div id="682">
+				<img src="img/ori/682_img_.png" height="100" width="300">
+			  </div>
+
+			</div>
+		</div>
+		</div>
+
+		<div class="footer">
+			<div class="w">
+			</div>
+		</div>
+
+    </div>
+
 	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 	<script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
-	<script type="text/javascript">
-	  $(document).on('ready', function() {
-		$(".center").slick({
-		  dots: false,
-		  vertical: true,
-		  centerMode: true,
-		  slidesToShow: 4,
-		  slidesToScroll: 4
-		});
-	  });
+    <script src="js/content.js" type="text/javascript" charset="utf-8"></script>
 
-	$("#T6000").click(function(){
-			$("#pic").find("img").attr("src","img/ori/T6000.png");	
-				$("#btn1").click(function(){
-						$("#pic").find("img").attr("src","img/ori/T6000.png");		
-				});
-				$("#btn2").click(function(){
-						$("#pic").find("img").attr("src","img/ours/T6000_UW-Portrait.png_out.jpg");		
-				});
-				$("#btn3").click(function(){
-						$("#pic").find("img").attr("src","img/ULAP/T6000_img__ULAP.jpg");		
-				});
-				$("#btn4").click(function(){
-						$("#pic").find("img").attr("src","img/IBLA/4_IBAL.png");		
-				});
-				$("#btn5").click(function(){
-						$("#pic").find("img").attr("src","img/UDCP/T6000_img__UDCP.jpg");		
-				});
-				$("#btn6").click(function(){
-						$("#pic").find("img").attr("src","img/UWCNN/T6000_UWCNN.png");		
-				});
-				$("#btn7").click(function(){
-						$("#pic").find("img").attr("src","img/waternet/4_WaterNet.png");		
-				});
-				$("#btn8").click(function(){
-						$("#pic").find("img").attr("src","img/UIEDAL/4_UIE-DAL.png");		
-				});
-	})
-	
-	 $("#41").click(function(){
-		$("#pic").find("img").attr("src","img/ori/41_img_.png");	
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/41_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/41_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/41_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/41_img__IBLA.png");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/41_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/41_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/41_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/41_img_.png_out.jpg");		
-			});
-	 })
-	 ;
-	 $("#615").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/615_img_.png");
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/615_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/615_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/615_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/615_img__IBLA.png");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/615_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/615_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/615_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/615_img_.png_out.jpg");		
-			});
-	 });
-	 $("#73").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/73_img_.png"); 
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/73_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/73_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/73_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/73_img__IBLA.png");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/73_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/73_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/73_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/73_img_.png_out.jpg");		
-			});
-	 });
-	 $("#116").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/116_img_.png"); 	
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/116_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/116_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/116_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/116_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/116_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/116_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/116_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/116_img_.png_out.jpg");		
-			});
-	 });
-	 $("#184").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/184_img_.png"); 
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/184_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/184_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/184_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/184_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/184_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/184_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/184_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/184_img_.png_out.jpg");		
-			});
-	 });
-	 $("#197").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/197_img_.png"); 	
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/197_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/197_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/197_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/197_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/197_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/197_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/197_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/197_img_.png_out.jpg");		
-			});
-	 });
-	 $("#200").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/200_img_.png"); 	
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/200_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/200_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/200_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/200_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/200_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/200_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/200_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/200_img_.png_out.jpg");		
-			});
-	 });
-	 $("#208").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/208_img_.png");
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/208_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/208_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/208_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/208_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/208_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/208_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/208_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/208_img_.png_out.jpg");		
-			});				
-	 });
-	 $("#211").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/211_img_.png"); 
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/211_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/211_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/211_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/211_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/211_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/211_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/211_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/211_img_.png_out.jpg");		
-			});				
-	 });
-	 $("#603").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/603_img_.png"); 	
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/603_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/603_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/603_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/603_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/603_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/603_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/603_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/603_img_.png_out.jpg");		
-			});			
-	 });
-	
-	 $("#682").click(function(){
-	  	$("#pic").find("img").attr("src","img/ori/682_img_.png"); 
-			$("#btn1").click(function(){
-					$("#pic").find("img").attr("src","img/ori/682_img_.png");		
-			});
-			$("#btn2").click(function(){
-					$("#pic").find("img").attr("src","img/ours/682_img_.png_out.jpg");		
-			});
-			$("#btn3").click(function(){
-					$("#pic").find("img").attr("src","img/ULAP/682_img__ULAP.jpg");		
-			});
-			$("#btn4").click(function(){
-					$("#pic").find("img").attr("src","img/IBLA/682_img__IBLA.jpg");		
-			});
-			$("#btn5").click(function(){
-					$("#pic").find("img").attr("src","img/UDCP/682_img__UDCP.jpg");		
-			});
-			$("#btn6").click(function(){
-					$("#pic").find("img").attr("src","img/UWCNN/682_img_.png_out.png");		
-			});
-			$("#btn7").click(function(){
-					$("#pic").find("img").attr("src","img/waternet/682_img_.png");		
-			});
-			$("#btn8").click(function(){
-					$("#pic").find("img").attr("src","img/UIEDAL/682_img_.png_out.jpg");		
-			});				
-	 });
-	 
-	</script>
-<div class="footer">
-        <div class="w">
-        </div>
-</div>
 
 </body>
 
