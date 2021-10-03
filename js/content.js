@@ -1,0 +1,392 @@
+$(document).on('ready', function() {
+    $(".center").slick({
+        dots: false,
+        vertical: true,
+        centerMode: true,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    });
+});
+
+if ($("#pic").attr("src") === "img/ori/T6000.png"){
+
+    $("#btn1").click(function(){
+        $("#pic").attr("src","img/ori/T6000.png");
+    });
+    $("#btn2").click(function(){
+        $("#pic").attr("src","img/ours/T6000_UW-Portrait.png_out.jpg");
+    });
+    $("#btn3").click(function(){
+        $("#pic").attr("src","img/ULAP/T6000_img__ULAP.jpg");
+    });
+    $("#btn4").click(function(){
+        $("#pic").attr("src","img/IBLA/4_IBAL.jpg");
+    });
+    $("#btn5").click(function(){
+        $("#pic").attr("src","img/UDCP/T6000_img__UDCP.jpg");
+    });
+    $("#btn6").click(function(){
+        $("#pic").attr("src","img/UWCNN/T6000_UWCNN.png");
+    });
+    $("#btn7").click(function(){
+        $("#pic").attr("src","img/waternet/4_WaterNet.png");
+    });
+    $("#btn8").click(function(){
+        $("#pic").attr("src","img/UIEDAL/4_UIE-DAL.png");
+    });
+}
+
+
+$("#T6000").click(function(){
+    $("#pic").attr("src","img/ori/T6000.png");
+    if ($("#pic").attr("src") === "img/ori/T6000.png"){
+
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/T6000.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/T6000_UW-Portrait.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/T6000_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/4_IBAL.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/T6000_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/T6000_UWCNN.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/4_WaterNet.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/4_UIE-DAL.png");
+        });
+    }
+
+});
+
+$("#41").click(function(){
+    $("#pic").attr("src","img/ori/41_img_.png");
+    if ($("#pic").attr("src") === "img/ori/41_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/41_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/41_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/41_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/41_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/41_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/41_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/41_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/41_img_.png_out.jpg");
+        });
+    }
+});
+
+$("#615").click(function(){
+    $("#pic").attr("src","img/ori/615_img_.png");
+    if ($("#pic").attr("src") === "img/ori/615_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/615_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/615_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/615_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/615_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/615_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/615_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/615_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/615_img_.png_out.jpg");
+        });
+    }
+});
+$("#73").click(function(){
+    $("#pic").attr("src","img/ori/73_img_.png");
+    if ($("#pic").attr("src") === "img/ori/73_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/73_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/73_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/73_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/73_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/73_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/73_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/73_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/73_img_.png_out.jpg");
+        });
+    }
+});
+$("#116").click(function(){
+    $("#pic").attr("src","img/ori/116_img_.png");
+    if ($("#pic").attr("src") === "img/ori/116_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/116_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/116_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/116_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/116_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/116_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/116_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/116_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/116_img_.png_out.jpg");
+        });
+    }
+});
+$("#184").click(function(){
+    $("#pic").attr("src","img/ori/184_img_.png");
+    if ($("#pic").attr("src") === "img/ori/184_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/184_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/184_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/184_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/184_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/184_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/184_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/184_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/184_img_.png_out.jpg");
+        });
+    }
+});
+$("#197").click(function(){
+    $("#pic").attr("src","img/ori/197_img_.png");
+    if ($("#pic").attr("src") === "img/ori/197_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/197_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/197_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/197_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/197_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/197_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/197_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/197_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/197_img_.png_out.jpg");
+        });
+    }
+});
+$("#200").click(function(){
+    $("#pic").attr("src","img/ori/200_img_.png");
+    if ($("#pic").attr("src") === "img/ori/200_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/200_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/200_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/200_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/200_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/200_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/200_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/200_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/200_img_.png_out.jpg");
+        });
+    }
+});
+$("#208").click(function(){
+    $("#pic").attr("src","img/ori/208_img_.png");
+    if ($("#pic").attr("src") === "img/ori/208_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/208_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/208_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/208_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/208_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/208_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/208_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/208_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/208_img_.png_out.jpg");
+        });
+    }
+});
+$("#211").click(function(){
+    $("#pic").attr("src","img/ori/211_img_.png");
+    if ($("#pic").attr("src") === "img/ori/211_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/211_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/211_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/211_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/211_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/211_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/211_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/211_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/211_img_.png_out.jpg");
+        });
+    }
+});
+$("#603").click(function(){
+    $("#pic").attr("src","img/ori/603_img_.png");
+    if ($("#pic").attr("src") === "img/ori/603_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/603_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/603_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/603_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/603_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/603_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/603_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/603_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/603_img_.png_out.jpg");
+        });
+    }
+});
+
+$("#682").click(function(){
+    $("#pic").attr("src","img/ori/682_img_.png");
+    if ($("#pic").attr("src") === "img/ori/682_img_.png"){
+        $("#btn1").click(function(){
+            $("#pic").attr("src","img/ori/682_img_.png");
+        });
+        $("#btn2").click(function(){
+            $("#pic").attr("src","img/ours/682_img_.png_out.jpg");
+        });
+        $("#btn3").click(function(){
+            $("#pic").attr("src","img/ULAP/682_img__ULAP.jpg");
+        });
+        $("#btn4").click(function(){
+            $("#pic").attr("src","img/IBLA/682_img__IBLA.jpg");
+        });
+        $("#btn5").click(function(){
+            $("#pic").attr("src","img/UDCP/682_img__UDCP.jpg");
+        });
+        $("#btn6").click(function(){
+            $("#pic").attr("src","img/UWCNN/682_img_.png_out.png");
+        });
+        $("#btn7").click(function(){
+            $("#pic").attr("src","img/waternet/682_img_.png");
+        });
+        $("#btn8").click(function(){
+            $("#pic").attr("src","img/UIEDAL/682_img_.png_out.jpg");
+        });
+    }
+});
