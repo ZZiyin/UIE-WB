@@ -1,7 +1,11 @@
+* {
+	box-sizing: border-box;
+}
 html {
 	font-family: Montserrat, sans-serif;
 	line-height: 1.5;
 	color: #4a4a4a;
+
 }
 body {
 	margin: 0;
@@ -34,7 +38,7 @@ h2 {
 	margin: 0 0 1.5rem;
 	text-align: justify;
 	font-size: medium;
-	font-weight: 300;
+	font-weight: 700;
 }
 h3 {
 	margin: 0;
@@ -76,15 +80,11 @@ h3.heading-font {
   display: table;
   clear: both;
 }
-.beer-slider {
-	margin-bottom: 0px;
-	margin-left: auto;
-	margin-right: auto;
-}
+
 .footer{
     height:50px;
     background:#ffffff;
-    border-top:10px solid #4c4c4c;
+    border-top:5px solid #5e5e5e;
     margin-top:50px;
 }
 .footer p{
@@ -105,16 +105,83 @@ h3.heading-font {
 }
 
 .btn{
-	padding: 10px 10px;
-
+	padding: 8px 8px;
 	border-radius: 10px;
-	background-color: #000000;
+	margin: 1px;
+	background-color: #4d5071;
 	color: white;
+	cursor:pointer;
+	border-color: black;
 }
 
+#btn3, #btn4, #btn5{
+	background-color: #959ad8;
+}
+
+#btn6, #btn7,#btn8{
+	background-color: #cfa9d8;
+}
+#btn2{
+	background-color: #d89fc1;
+}
 @media screen and (max-width: 600px) {
 	.column {
 		width: 100%;
 	}
 }
-  
+
+.slider . div{
+	cursor:pointer
+}
+
+.slider {
+	width: 130%;
+	height: 100%;
+	margin: 0px auto;
+}
+
+.slick-slide {
+	margin: 0px 20px;
+}
+
+.slick-slide img {
+	width: 100%;
+}
+
+.slick-prev:before,
+.slick-next:before {
+	color: black;
+}
+
+
+.slick-slide {
+	transition: all ease-in-out .3s;
+	opacity: .2;
+}
+
+.slick-active {
+	opacity: .5;
+}
+
+.slick-current {
+	opacity: 1;
+}
+
+.left img{
+	padding-left: 50px;
+	padding-right: 50px;
+	margin-top: 10px;
+	margin-bottom: 30px;
+    height:400px;
+    width:640px;
+}
+.button{
+	 padding-left: 40px;
+ }
+
+
+
+
+.right div div img{
+	cursor:pointer;
+}
