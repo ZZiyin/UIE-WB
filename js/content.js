@@ -1,13 +1,21 @@
+//$(document).on('ready', function() {
+//    $(".center").slick({
+//        dots: false,
+//        vertical: true,
+//        centerMode: true,
+//        slidesToShow: 4,
+//        slidesToScroll: 4
+//    });
+//});
 $(document).on('ready', function() {
-    $(".center").slick({
-        dots: false,
-        vertical: true,
-        centerMode: true,
-        slidesToShow: 4,
-        slidesToScroll: 4
-    });
+     $(".center").slick({
+            dots: false,
+            infinite: true,
+            centerMode: true,
+            slidesToShow: 5,
+            slidesToScroll: 3
+          });
 });
-
 var images = new Array()
 function preload() {
     for (i = 0; i < preload.arguments.length; i++) {

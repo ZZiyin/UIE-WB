@@ -28,12 +28,51 @@
 	    </header>
 			<h2><b>Visual comparison</b></h2>
 			<h2 style="font: inherit;">
-				We list 12 real underwater images in the right slider, please choose the image you want to filter, then click the button below to choose the method. (Purple and pink represent physics-based and learning-based method respectively)
-			</h2>
+				We list 12 real underwater images which can be processed by three <span style="color:#959ad8">physics-based methods</span> and four <span style="color:#cfa9d8">learning-based methods</span>. 1) Choose an image to filter, and 2) click the button below to see the result.	</h2>
 
-		<div class ="row">
 
-		<div class="left">
+		<div class="right">
+			<div class="center slider vertical-center-3 slider">
+			  <div id="T6000">
+				<img src="img/ori/T6000.png" height="95" width="400">
+			  </div>
+			  <div id="41" >
+				<img src="img/ori/41_img_.png" height="95" width="400">
+			  </div>
+			  <div id="615">
+				<img src="img/ori/615_img_.png" height="95" width="400">
+			  </div>
+			  <div id="73">
+				<img src="img/ori/73_img_.png" height="95" width="400">
+			  </div>
+			  <div id="184">
+				<img src="img/ori/184_img_.png" height="95" width="400">
+			  </div>
+			  <div id="208">
+				<img src="img/ori/208_img_.png" height="95" width="400">
+			  </div>
+			  <div id="116">
+				<img src="img/ori/116_img_.png" height="95" width="400">
+			  </div>
+			  <div id="197">
+				<img src="img/ori/197_img_.png" height="95" width="400">
+			  </div>
+			  <div id="200">
+				<img src="img/ori/200_img_.png" height="95" width="400">
+			  </div>
+			  <div id="211">
+				<img src="img/ori/211_img_.png" height="95" width="400">
+			  </div>
+			  <div id="603">
+				<img src="img/ori/603_img_.png" height="95" width="400">
+			  </div>
+			  <div id="682">
+				<img src="img/ori/682_img_.png" height="95" width="400">
+			  </div>
+
+			</div>
+		</div>
+		<div class="left" align="center" >
 
 			<img id="pic" style="display:block" src="img/ori/T6000.png"  >
 
@@ -62,95 +101,53 @@
 			</div>
 
 		</div>
-		<div class="right">
-			<div class="center slider">
-			  <div id="T6000">
-				<img src="img/ori/T6000.png" height="100" width="350">
-			  </div>
-			  <div id="41" >
-				<img src="img/ori/41_img_.png" height="100" width="350">
-			  </div>
-			  <div id="615">
-				<img src="img/ori/615_img_.png" height="100" width="350">
-			  </div>
-			  <div id="73">
-				<img src="img/ori/73_img_.png" height="100" width="350">
-			  </div>
-			  <div id="184">
-				<img src="img/ori/184_img_.png" height="100" width="350">
-			  </div>
-			  <div id="208">
-				<img src="img/ori/208_img_.png" height="100" width="350">
-			  </div>
-			  <div id="116">
-				<img src="img/ori/116_img_.png" height="100" width="350">
-			  </div>
-			  <div id="197">
-				<img src="img/ori/197_img_.png" height="100" width="300">
-			  </div>
-			  <div id="200">
-				<img src="img/ori/200_img_.png" height="100" width="350">
-			  </div>
-			  <div id="211">
-				<img src="img/ori/211_img_.png" height="100" width="350">
-			  </div>
-			  <div id="603">
-				<img src="img/ori/603_img_.png" height="100" width="300">
-			  </div>
-			  <div id="682">
-				<img src="img/ori/682_img_.png" height="100" width="300">
-			  </div>
 
-			</div>
-		</div>
 
-		</div>
+<!--		<div class="analysis">-->
+<!--			<h2><b>Analysis</b></h2>-->
+<!--			<table id="ana" border="1">-->
+<!--				<thead>-->
+<!--				<tr>-->
+<!--					<th>Name</th>-->
+<!--					<th>Advantages</th>-->
+<!--					<th>Disadvantages</th>-->
+<!--				</tr>-->
+<!--				</thead>-->
 
-		<div class="analysis">
-			<h2><b>Analysis</b></h2>
-			<table id="ana" border="1">
-				<thead>
-				<tr>
-					<th>Name</th>
-					<th>Advantages</th>
-					<th>Disadvantages</th>
-				</tr>
-				</thead>
-
-				<tbody>
-				<tr>
-					<td class="phy">ULAP</td>
-					<td>Improve the contrast and illuminance well </td>
-					<td>Unnatural reddish tone in some enhanced images, poor performance for turbid water type (yellow)</td>
-				</tr>
-				<tr>
-					<td class="phy">IBLA</td>
-					<td>Improve the contrast well</td>
-					<td>Some of enhanced images show excessive contrast, poor performance for turbid water type (yellow)</td>
-				</tr>
-				<tr>
-					<td class="phy">UDCP</td>
-					<td>Improve the contrast significantly</td>
-					<td>Result in greenish tone in some regions</td>
-				</tr>
-				<tr>
-					<td class="lr">UWCNN</td>
-					<td>Generalzied well to different underwater scenes</td>
-					<td>Models should be selected according to the water types, single model cannot achieve satisfactory results for all types.</td>
-				</tr>
-				<tr>
-					<td class="lr">WaterNet</td>
-					<td>Remove different color casts while avoiding the unnatural artifacts</td>
-					<td>Enhanced images show low contrast and illuminance</td>
-				</tr>
-				<tr>
-					<td class="lr">UIE-DAL</td>
-					<td>The introduction of classifier makes it handling the diversity of water types well</td>
-					<td>Unnatural reddish tone and artifacts are in enhanced images</td>
-				</tr>
-				</tbody>
-			</table>
-		</div>
+<!--				<tbody>-->
+<!--				<tr>-->
+<!--					<td class="phy">ULAP</td>-->
+<!--					<td>Improve the contrast and illuminance well </td>-->
+<!--					<td>Unnatural reddish tone in some enhanced images, poor performance for turbid water type (yellow)</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td class="phy">IBLA</td>-->
+<!--					<td>Improve the contrast well</td>-->
+<!--					<td>Some of enhanced images show excessive contrast, poor performance for turbid water type (yellow)</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td class="phy">UDCP</td>-->
+<!--					<td>Improve the contrast significantly</td>-->
+<!--					<td>Result in greenish tone in some regions</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td class="lr">UWCNN</td>-->
+<!--					<td>Generalzied well to different underwater scenes</td>-->
+<!--					<td>Models should be selected according to the water types, single model cannot achieve satisfactory results for all types.</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td class="lr">WaterNet</td>-->
+<!--					<td>Remove different color casts while avoiding the unnatural artifacts</td>-->
+<!--					<td>Enhanced images show low contrast and illuminance</td>-->
+<!--				</tr>-->
+<!--				<tr>-->
+<!--					<td class="lr">UIE-DAL</td>-->
+<!--					<td>The introduction of classifier makes it handling the diversity of water types well</td>-->
+<!--					<td>Unnatural reddish tone and artifacts are in enhanced images</td>-->
+<!--				</tr>-->
+<!--				</tbody>-->
+<!--			</table>-->
+<!--		</div>-->
 		<div class="cit">
 			<h2><b>References</b></h2>
 			<table id="ref" border="1">
