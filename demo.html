@@ -1,223 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
-  <title>A Wavelet-based Dual-stream Network for Underwater Image Enhancement</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="stylesheet" href="BeerSlider.css">
-  <link rel="stylesheet" type="text/css" href="slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-  <link rel="stylesheet" href="css/demo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <title>A Wavelet-based Dual-stream Network for Underwater Image Enhancement</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="BeerSlider.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
+    <link rel="stylesheet" href="css/demo.css">
 
 </head>
 
 <body>
-	
-	<div class="container">
-	    <header>
-			</br>
-            <h1> <b> A Wavelet-based Dual-stream Network for Underwater Image Enhancement </b></h1>
-			</br>
-			<h2><center>Ziyin Ma and Changjae Oh</center></h2>
-			<h2><center>School of Electrical Engineering and Computer Science, Queen Mary University of London, UK</center></h2>
-			<h2><b>Abstract</b></h2>
-			 <h2 style="font: inherit;">
-                 We present a wavelet-based dual-stream network that addresses color cast and blur in underwater images. We handle these artifacts separately by decomposing an input image into frequency bands using discrete wavelet transform, which generates the downsampled structure image and detail images.</br>
-				 These sub-band images are used as input to our dual-stream network that incorporates two sub-networks, multi-color space fusion network and detail enhancement network. The multi-color space network takes the decomposed structure image as input and estimates the color corrected output by employing the feature representations from diverse color spaces of the input. The detail enhancement network addresses the blurriness of the original underwater image by improving the image details from high-frequency sub-bands. We validate the proposed model on both real-world dataset and synthetic underwater datasets and show the effectiveness of the proposed method in color correction and blur removal with low computation. 			 </h2>
-	    </header>
-			<h2><b>Visual comparison</b></h2>
-			<h2 style="font: inherit;">
-				We list 12 real underwater images which can be processed by three <span style="color:#959ad8">physics-based methods</span> and four <span style="color:#cfa9d8">learning-based methods</span>. 1) Choose an image to filter, and 2) click the button below to see the result.	</h2>
 
+<div class="container">
+    <header>
+        </br>
+        <h1><b> A Wavelet-based Dual-stream Network for Underwater Image Enhancement </b></h1>
+        </br>
+        <h2>
+            <center>Ziyin Ma and <a href="http://eecs.qmul.ac.uk/~coh/">Changjae Oh</a></center>
+        </h2>
+        <h2>
+            <center>School of Electrical Engineering and Computer Science, Queen Mary University of London, UK</center>
+        </h2>
+        <ul id="tabs" style="background-color:#fff;">
+            <li>
+                <a href="#abstract">ABSTRACT</a>
+            </li>
+            <li>
+                <a href="#method">METHOD</a>
+            </li>
+            <li>
+                <a href="#result">RESULTS</a>
+            </li>
+            <li>
+                <a href="#material">MATERIALS</a>
+            </li>
+        </ul>
+    </header>
 
-		<div class="right">
-			<div class="center slider vertical-center-3 slider">
-			  <div id="T6000">
-				<img src="img/ori/T6000.png" height="95" width="400">
-			  </div>
-			  <div id="41" >
-				<img src="img/ori/41_img_.png" height="95" width="400">
-			  </div>
-			  <div id="615">
-				<img src="img/ori/615_img_.png" height="95" width="400">
-			  </div>
-			  <div id="73">
-				<img src="img/ori/73_img_.png" height="95" width="400">
-			  </div>
-			  <div id="184">
-				<img src="img/ori/184_img_.png" height="95" width="400">
-			  </div>
-			  <div id="208">
-				<img src="img/ori/208_img_.png" height="95" width="400">
-			  </div>
-			  <div id="116">
-				<img src="img/ori/116_img_.png" height="95" width="400">
-			  </div>
-			  <div id="197">
-				<img src="img/ori/197_img_.png" height="95" width="400">
-			  </div>
-			  <div id="200">
-				<img src="img/ori/200_img_.png" height="95" width="400">
-			  </div>
-			  <div id="211">
-				<img src="img/ori/211_img_.png" height="95" width="400">
-			  </div>
-			  <div id="603">
-				<img src="img/ori/603_img_.png" height="95" width="400">
-			  </div>
-			  <div id="682">
-				<img src="img/ori/682_img_.png" height="95" width="400">
-			  </div>
-
-			</div>
-		</div>
-		<div class="left" align="center" >
-
-			<img id="pic" style="display:block" src="img/ori/T6000.png"  >
-
-			<img src="img/ori/41_img_.png"  style="display:none">
-			<img src="img/ori/615_img_.png" style="display:none">
-			<img src="img/ori/73_img_.png"  style="display:none">
-			<img src="img/ori/184_img_.png" style="display:none">
-			<img src="img/ori/208_img_.png" style="display:none">
-			<img src="img/ori/116_img_.png" style="display:none">
-			<img src="img/ori/197_img_.png" style="display:none">
-			<img src="img/ori/200_img_.png" style="display:none">
-			<img src="img/ori/211_img_.png" style="display:none">
-			<img src="img/ori/603_img_.png" style="display:none">
-			<img src="img/ori/682_img_.png" style="display:none">
-
-
-			<div class="button" >
-				<button id ="btn1" class= 'btn'>Original</button>
-				<button id ="btn3" class= 'btn'>ULAP</button>
-				<button id ="btn4" class= 'btn'>IBAL</button>
-				<button id ="btn5" class= 'btn'>UDCP</button>
-				<button id ="btn6" class= 'btn'>UWCNN</button>
-				<button id ="btn7" class= 'btn'>WaterNet</button>
-				<button id ="btn8" class= 'btn'>UIE-DAL</button>
-				<button id ="btn2" class= 'btn'>Ours</button>
-			</div>
-
-		</div>
-
-
-<!--		<div class="analysis">-->
-<!--			<h2><b>Analysis</b></h2>-->
-<!--			<table id="ana" border="1">-->
-<!--				<thead>-->
-<!--				<tr>-->
-<!--					<th>Name</th>-->
-<!--					<th>Advantages</th>-->
-<!--					<th>Disadvantages</th>-->
-<!--				</tr>-->
-<!--				</thead>-->
-
-<!--				<tbody>-->
-<!--				<tr>-->
-<!--					<td class="phy">ULAP</td>-->
-<!--					<td>Improve the contrast and illuminance well </td>-->
-<!--					<td>Unnatural reddish tone in some enhanced images, poor performance for turbid water type (yellow)</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td class="phy">IBLA</td>-->
-<!--					<td>Improve the contrast well</td>-->
-<!--					<td>Some of enhanced images show excessive contrast, poor performance for turbid water type (yellow)</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td class="phy">UDCP</td>-->
-<!--					<td>Improve the contrast significantly</td>-->
-<!--					<td>Result in greenish tone in some regions</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td class="lr">UWCNN</td>-->
-<!--					<td>Generalzied well to different underwater scenes</td>-->
-<!--					<td>Models should be selected according to the water types, single model cannot achieve satisfactory results for all types.</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td class="lr">WaterNet</td>-->
-<!--					<td>Remove different color casts while avoiding the unnatural artifacts</td>-->
-<!--					<td>Enhanced images show low contrast and illuminance</td>-->
-<!--				</tr>-->
-<!--				<tr>-->
-<!--					<td class="lr">UIE-DAL</td>-->
-<!--					<td>The introduction of classifier makes it handling the diversity of water types well</td>-->
-<!--					<td>Unnatural reddish tone and artifacts are in enhanced images</td>-->
-<!--				</tr>-->
-<!--				</tbody>-->
-<!--			</table>-->
-<!--		</div>-->
-		<div class="cit">
-			<h2><b>References</b></h2>
-			<table id="ref" border="1">
-				<thead>
-				<tr>
-					<th>Name</th>
-					<th>Title</th>
-					<th>Year</th>
-					<th>Author</th>
-					<th>Paper</th>
-
-				</tr>
-				</thead>
-
-				<tbody>
-				<tr>
-					<td class="phy">ULAP</td>
-					<td>A rapid scene depth estimation model based on underwater light attenuation prior for underwater image restoration</td>
-					<td>2018</td>
-					<td>W. Song <i>et al.</i></td>
-					<td><a href='https://link.springer.com/chapter/10.1007/978-3-030-00776-8_62' target='_blank'>[Paper]</a></td>
-				</tr>
-				<tr>
-					<td class="phy">IBLA</td>
-					<td>Underwater image restoration based on image blurriness and light absorption</td>
-					<td>2017</td>
-					<td>Y.T. Peng, P.C. Cosman</td>
-					<td><a href='https://ieeexplore.ieee.org/abstract/document/7840002' target='_blank'>[Paper]</a></td>
-				</tr>
-				<tr>
-					<td class="phy">UDCP</td>
-					<td>Transmission estimation in underwater single images</td>
-					<td>2013</td>
-					<td>P. Drews <i>et al.</i></td>
-					<td><a href='https://www.cv-foundation.org/openaccess/content_iccv_workshops_2013/W24/html/Drews_Jr._Transmission_Estimation_in_2013_ICCV_paper.html' target='_blank'>[Paper]</a></td>
-				</tr>
-				<tr>
-					<td class="lr">UWCNN</td>
-					<td>Underwater scene prior inspired deep underwater image and video enhancement</td>
-					<td>2020</td>
-					<td>G. Hou <i>et al.</i></td>
-					<td><a href='https://www.sciencedirect.com/science/article/pii/S1047320319303530' target='_blank'>[Paper]</a></td>
-				</tr>
-				<tr>
-					<td class="lr">WaterNet</td>
-					<td>Deep underwater image enhancement</td>
-					<td>2018</td>
-					<td>C. Li <i>et al.</i></td>
-					<td><a href='https://www.sciencedirect.com/science/article/pii/S0031320319303401' target='_blank'>[Paper]</a></td>
-				</tr>
-				<tr>
-					<td class="lr">UIE-DAL</td>
-					<td>All-in-one underwater image enhancement using domain-adversarial learning</td>
-					<td>2019</td>
-					<td>P.M. Uplavikar <i>et al.</i></td>
-					<td><a href='https://openaccess.thecvf.com/content_CVPRW_2019/papers/UG2+%20Prize%20Challenge/Uplavikar_All-in-One_Underwater_Image_Enhancement_Using_Domain-Adversarial_Learning_CVPRW_2019_paper.pdf' target='_blank'>[Paper]</a></td>
-				</tr>
-
-			</table>
-		</div>
-		<div class="footer">
-			<div class="w">
-			</div>
-		</div>
-
+    <div id="abstract">
+        <h4><b>Abstract</b></h4>
+        <h2 style="font: inherit;">
+            We present a wavelet-based dual-stream network that addresses color cast and blur in underwater images. We
+            handle these artifacts separately by decomposing an input image into frequency bands using discrete wavelet
+            transform, which generates the downsampled structure image and detail images.</br>
+            These sub-band images are used as input to our dual-stream network that incorporates two sub-networks,
+            multi-color space fusion network and detail enhancement network. The multi-color space network takes the
+            decomposed structure image as input and estimates the color corrected output by employing the feature
+            representations from diverse color spaces of the input. The detail enhancement network addresses the
+            blurriness of the original underwater image by improving the image details from high-frequency sub-bands. We
+            validate the proposed model on both real-world dataset and synthetic underwater datasets and show the
+            effectiveness of the proposed method in color correction and blur removal with low computation. </h2>
+    </div>
+    <div class="pip" align="center" id="method">
+        <h4><b>Method</b></h4>
+        <img id="pip" src="img/pip.png" height="500" width="700">
+        <h2 style="font: inherit;text-align: center;"><b> overview of our framework </b></h2>
+        <h2 style="font: inherit;">The sub-band images with multiple frequency bands are obtained by
+            discrete wavelet transform (DWT), which facilitates to decouple the
+            color cast and blurry details in underwater images and separately address these artifacts with f<sub>S</sub>(·)
+            and f<sub>D</sub>(·), respectively. f<sub>S</sub>(·) and
+            f<sub>D</sub>(·) are constrained by the structure loss, L<sub>S</sub>, and the detail loss,
+            L<sub>D</sub>, respectively. The output, f(I), after inverse DWT (IDWT), is constrained by the adversarial
+            loss, L<sub>adv</sub>, with the generative adversarial network (GAN) discriminator, C(·).</h2>
     </div>
 
-	<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-	<script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/content.js" type="text/javascript" charset="utf-8"></script>
+    <div id="result">
+        <h4><b>Visual comparison</b></h4>
+        <h2 style="font: inherit;">
+            We list 12 real underwater images which can be processed by three <span style="color:#959ad8">physics-based methods</span>
+            and four <span style="color:#cfa9d8">learning-based methods</span>. 1) Choose an image to filter, and 2)
+            click the button below to see the result. </h2>
+
+        <div class="right">
+            <div class="center slider vertical-center-3 slider">
+                <div id="T6000">
+                    <img src="img/ori/T6000.png" height="95" width="400">
+                </div>
+                <div id="41">
+                    <img src="img/ori/41_img_.png" height="95" width="400">
+                </div>
+                <div id="615">
+                    <img src="img/ori/615_img_.png" height="95" width="400">
+                </div>
+                <div id="73">
+                    <img src="img/ori/73_img_.png" height="95" width="400">
+                </div>
+                <div id="184">
+                    <img src="img/ori/184_img_.png" height="95" width="400">
+                </div>
+                <div id="208">
+                    <img src="img/ori/208_img_.png" height="95" width="400">
+                </div>
+                <div id="116">
+                    <img src="img/ori/116_img_.png" height="95" width="400">
+                </div>
+                <div id="197">
+                    <img src="img/ori/197_img_.png" height="95" width="400">
+                </div>
+                <div id="200">
+                    <img src="img/ori/200_img_.png" height="95" width="400">
+                </div>
+                <div id="211">
+                    <img src="img/ori/211_img_.png" height="95" width="400">
+                </div>
+                <div id="603">
+                    <img src="img/ori/603_img_.png" height="95" width="400">
+                </div>
+                <div id="682">
+                    <img src="img/ori/682_img_.png" height="95" width="400">
+                </div>
+
+            </div>
+        </div>
+        <div class="left" align="center">
+
+            <img id="pic" style="display:block" src="img/ori/T6000.png">
+
+            <img src="img/ori/41_img_.png" style="display:none">
+            <img src="img/ori/615_img_.png" style="display:none">
+            <img src="img/ori/73_img_.png" style="display:none">
+            <img src="img/ori/184_img_.png" style="display:none">
+            <img src="img/ori/208_img_.png" style="display:none">
+            <img src="img/ori/116_img_.png" style="display:none">
+            <img src="img/ori/197_img_.png" style="display:none">
+            <img src="img/ori/200_img_.png" style="display:none">
+            <img src="img/ori/211_img_.png" style="display:none">
+            <img src="img/ori/603_img_.png" style="display:none">
+            <img src="img/ori/682_img_.png" style="display:none">
+
+
+            <div class="button">
+                <button id="btn1" class='btn'>Original</button>
+                <button id="btn3" class='btn'>ULAP</button>
+                <button id="btn4" class='btn'>IBAL</button>
+                <button id="btn5" class='btn'>UDCP</button>
+                <button id="btn6" class='btn'>UWCNN</button>
+                <button id="btn7" class='btn'>WaterNet</button>
+                <button id="btn8" class='btn'>UIE-DAL</button>
+                <button id="btn2" class='btn'>Ours</button>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--		<div class="analysis">-->
+    <!--			<h2><b>Analysis</b></h2>-->
+    <!--			<table id="ana" border="1">-->
+    <!--				<thead>-->
+    <!--				<tr>-->
+    <!--					<th>Name</th>-->
+    <!--					<th>Advantages</th>-->
+    <!--					<th>Disadvantages</th>-->
+    <!--				</tr>-->
+    <!--				</thead>-->
+
+    <!--				<tbody>-->
+    <!--				<tr>-->
+    <!--					<td class="phy">ULAP</td>-->
+    <!--					<td>Improve the contrast and illuminance well </td>-->
+    <!--					<td>Unnatural reddish tone in some enhanced images, poor performance for turbid water type (yellow)</td>-->
+    <!--				</tr>-->
+    <!--				<tr>-->
+    <!--					<td class="phy">IBLA</td>-->
+    <!--					<td>Improve the contrast well</td>-->
+    <!--					<td>Some of enhanced images show excessive contrast, poor performance for turbid water type (yellow)</td>-->
+    <!--				</tr>-->
+    <!--				<tr>-->
+    <!--					<td class="phy">UDCP</td>-->
+    <!--					<td>Improve the contrast significantly</td>-->
+    <!--					<td>Result in greenish tone in some regions</td>-->
+    <!--				</tr>-->
+    <!--				<tr>-->
+    <!--					<td class="lr">UWCNN</td>-->
+    <!--					<td>Generalzied well to different underwater scenes</td>-->
+    <!--					<td>Models should be selected according to the water types, single model cannot achieve satisfactory results for all types.</td>-->
+    <!--				</tr>-->
+    <!--				<tr>-->
+    <!--					<td class="lr">WaterNet</td>-->
+    <!--					<td>Remove different color casts while avoiding the unnatural artifacts</td>-->
+    <!--					<td>Enhanced images show low contrast and illuminance</td>-->
+    <!--				</tr>-->
+    <!--				<tr>-->
+    <!--					<td class="lr">UIE-DAL</td>-->
+    <!--					<td>The introduction of classifier makes it handling the diversity of water types well</td>-->
+    <!--					<td>Unnatural reddish tone and artifacts are in enhanced images</td>-->
+    <!--				</tr>-->
+    <!--				</tbody>-->
+    <!--			</table>-->
+    <!--		</div>-->
+
+    <div class="cit">
+        <h4><b>References</b></h4>
+        <table id="ref" border="1">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Year</th>
+                <th>Author</th>
+                <th>Paper</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td class="phy">ULAP</td>
+                <td>A rapid scene depth estimation model based on underwater light attenuation prior for underwater
+                    image restoration
+                </td>
+                <td>2018</td>
+                <td>W. Song <i>et al.</i></td>
+                <td><a href='https://link.springer.com/chapter/10.1007/978-3-030-00776-8_62' target='_blank'>[Paper]</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="phy">IBLA</td>
+                <td>Underwater image restoration based on image blurriness and light absorption</td>
+                <td>2017</td>
+                <td>Y.T. Peng, P.C. Cosman</td>
+                <td><a href='https://ieeexplore.ieee.org/abstract/document/7840002' target='_blank'>[Paper]</a></td>
+            </tr>
+            <tr>
+                <td class="phy">UDCP</td>
+                <td>Transmission estimation in underwater single images</td>
+                <td>2013</td>
+                <td>P. Drews <i>et al.</i></td>
+                <td>
+                    <a href='https://www.cv-foundation.org/openaccess/content_iccv_workshops_2013/W24/html/Drews_Jr._Transmission_Estimation_in_2013_ICCV_paper.html'
+                       target='_blank'>[Paper]</a></td>
+            </tr>
+            <tr>
+                <td class="lr">UWCNN</td>
+                <td>Underwater scene prior inspired deep underwater image and video enhancement</td>
+                <td>2020</td>
+                <td>G. Hou <i>et al.</i></td>
+                <td><a href='https://www.sciencedirect.com/science/article/pii/S1047320319303530' target='_blank'>[Paper]</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="lr">WaterNet</td>
+                <td>Deep underwater image enhancement</td>
+                <td>2018</td>
+                <td>C. Li <i>et al.</i></td>
+                <td><a href='https://www.sciencedirect.com/science/article/pii/S0031320319303401' target='_blank'>[Paper]</a>
+                </td>
+            </tr>
+            <tr>
+                <td class="lr">UIE-DAL</td>
+                <td>All-in-one underwater image enhancement using domain-adversarial learning</td>
+                <td>2019</td>
+                <td>P.M. Uplavikar <i>et al.</i></td>
+                <td>
+                    <a href='https://openaccess.thecvf.com/content_CVPRW_2019/papers/UG2+%20Prize%20Challenge/Uplavikar_All-in-One_Underwater_Image_Enhancement_Using_Domain-Adversarial_Learning_CVPRW_2019_paper.pdf'
+                       target='_blank'>[Paper]</a></td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="material">
+        <h4><b>Material</b></h4>
+        <a href="img/ma.pdf">
+            <button>Paper (ICASSP)</button>
+        </a>
+        <a href="https://github.com/ZZiyin/UIE-WD_Code">
+            <button>Code</button>
+        </a>
+
+    </div>
+    <div class="footer">
+        <div class="w">
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/content.js" type="text/javascript" charset="utf-8"></script>
 
 
 </body>

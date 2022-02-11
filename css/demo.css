@@ -13,6 +13,7 @@ body {
 header{
 	text-align: center;
 	overflow: hidden;
+	text-shadow: 1px 1px 3px #cccccc;
 }
 p {
 	margin: 0; }
@@ -26,7 +27,6 @@ p {
 	font-weight: 400;}
 a {
 	text-decoration: none;
-	color: #ef5f52;
 	transition: 0.5s; }
 h1 {
 	font-size: 3rem;
@@ -45,14 +45,19 @@ h3 {
 	 text-align: justify;
 	 font-size: medium;
 }
-section h2, section h3, a {
-	color: #ef5f52;
+h4 {
+	margin: 0 0 1.5rem;
+	text-align: justify;
+	font-size: large;
+	font-weight: 700;
 }
-section a {
-	border-bottom: 1px solid;
+a {
+	color: #718ec4
+
 }
-section a:hover {
-	color: #000;
+
+a:hover {
+	color: #cfa9d8;
 }
 
 .mb {
@@ -198,6 +203,7 @@ h3.heading-font {
     width:100%;
     border-collapse:collapse;
     font-size: 14px;
+    margin: 0 0 1.5rem;
 
 }
 
@@ -213,4 +219,77 @@ h3.heading-font {
 
 .analysis{
     margin-bottom:40px;
+}
+
+
+#tabs {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin: 0 0 1rem;
+
+}
+
+.container li{
+    display: inline;
+    line-height: 40px;
+    float:left;
+    position: relative;
+    line-height: 30px;
+    color: #4a4a4a;
+    background-color: #e2e2e2;
+    font-weight:bold
+}
+
+#tabs a {
+  float: left;
+  position: relative;
+  padding: 0 70px;
+  height: 0;
+  line-height: 30px;
+  color: #fff;
+  border-bottom: 30px solid #4a4a4a;
+}
+
+#tabs a:hover {
+  border-bottom-color: #2ac7e1;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+
+#material button{
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    box-sizing: border-box;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    -webkit-appearance: button;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    display: inline-block;
+    padding: 10px 35px;
+    margin: 3px;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    outline: none;
+    background: transparent;
+    opacity: 0.7;
+    color: #3e609e;
+    border-color: #3e609e;
+    right: 0px;
+    bottom: 0px;
+    height: 30px;
+    line-height: 5px;
+    background-color: transparent;
+    transition: 0.2s color;}
+
+#material button:hover {
+    color: #cfa9d8;
+    border-color: #cfa9d8;
 }
